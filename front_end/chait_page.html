@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="chat-section">
+      <h2>Chat</h2>
+      <div class="chat-box" id="chatBox"></div>
+      <input type="text" id="messageInput" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="summary-outline-section">
+      <div class="summary-box">
+        <h2>Summary</h2>
+        <p id="summaryText">Summary will appear here...</p>
+      </div>
+
+      <div class="outline-box">
+        <h2>Outline</h2>
+        <p id="outlineText">Outline will appear here...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
