@@ -29,6 +29,7 @@ p {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 20px;
 }
 
 /* Chat Section */
@@ -108,4 +109,67 @@ button:hover {
 
 .chat-box::-webkit-scrollbar-track {
   background-color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Stack the sections vertically on smaller screens */
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .chat-section, .summary-outline-section {
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  input[type="text"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .chat-box {
+    height: 300px;
+  }
 }
