@@ -1,3 +1,19 @@
+// Select the dark mode toggle button
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Add event listener to toggle dark mode
+darkModeToggle.addEventListener('click', () => {
+  // Toggle the 'dark-mode' class on the body element
+  document.body.classList.toggle('dark-mode');
+
+  // Update the button text based on the current mode
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeToggle.innerText = 'Switch to Light Mode';
+  } else {
+    darkModeToggle.innerText = 'Switch to Dark Mode';
+  }
+});
+
 // This will handle sending messages in the chat
 function sendMessage() {
     const chatBox = document.getElementById('chatBox');
