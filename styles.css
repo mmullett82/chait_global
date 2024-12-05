@@ -33,7 +33,6 @@ p {
 }
 
 .chat-section {
-  position: relative !important; /* Enables relative positioning for slider */
   width: 60% !important;
   background-color: #fff !important;
   border-radius: 10px !important;
@@ -42,6 +41,7 @@ p {
 }
 
 .chat-box {
+  position: relative !important; /* Enable positioning for the slider */
   height: 350px !important;
   border: 1px solid #e0e0e0 !important;
   border-radius: 8px !important;
@@ -133,15 +133,19 @@ body.dark-mode button:hover {
 
 /* Dark Mode Slider */
 .dark-mode-slider {
-  position: absolute !important; /* Position relative to chat-section */
-  bottom: -60px !important; /* Below the chat box */
-  right: 20px !important; /* Align with right side */
+  position: absolute !important; /* Position relative to chat-box */
+  bottom: 10px !important; /* Inside the chat-box at the bottom */
+  right: 10px !important; /* Align with right side */
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
   z-index: 1000 !important;
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Optional background for contrast */
+  padding: 5px 10px !important;
+  border-radius: 15px !important;
 }
 
+/* Slider Styles */
 .switch {
   position: relative !important;
   display: inline-block !important;
@@ -162,7 +166,7 @@ body.dark-mode button:hover {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background-color: #ccc !important;
+  background-color: #ccc !important; /* Default background */
   transition: 0.4s !important;
   border-radius: 34px !important;
 }
@@ -189,8 +193,9 @@ input:checked + .slider:before {
 
 .mode-label {
   font-family: 'Poppins', sans-serif !important;
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   color: #333 !important;
+  margin-left: 5px !important;
 }
 
 /* Responsive Design */
@@ -228,8 +233,8 @@ input:checked + .slider:before {
   }
 
   .dark-mode-slider {
-    position: static !important; /* Stack naturally below elements */
-    margin-top: 20px !important;
+    bottom: 10px !important;
+    right: 10px !important;
   }
 }
 
@@ -261,6 +266,7 @@ input:checked + .slider:before {
   }
 
   .dark-mode-slider {
-    margin-top: 20px !important;
+    bottom: 10px !important;
+    right: 10px !important;
   }
 }
