@@ -38,6 +38,7 @@ p {
   border-radius: 10px !important;
   padding: 20px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+  position: relative; /* For positioning the slider relative to the chat box */
 }
 
 .chat-box {
@@ -132,9 +133,9 @@ body.dark-mode button:hover {
 
 /* Dark Mode Slider */
 .dark-mode-slider {
-  position: fixed !important;
-  top: 20px !important;
-  right: 20px !important;
+  position: absolute !important; /* Positioned relative to the chat section */
+  bottom: -50px !important; /* Positioned just below the chat box */
+  right: 20px !important; /* Aligned to the bottom-right corner */
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
@@ -149,7 +150,7 @@ body.dark-mode button:hover {
 }
 
 .switch input {
-  opacity: 0 !important;
+  opacity: 0 !important; /* Hide the checkbox completely */
   width: 0 !important;
   height: 0 !important;
 }
@@ -161,7 +162,7 @@ body.dark-mode button:hover {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background-color: #ccc !important;
+  background-color: #ccc !important; /* Default background */
   transition: 0.4s !important;
   border-radius: 34px !important;
 }
@@ -179,17 +180,11 @@ body.dark-mode button:hover {
 }
 
 input:checked + .slider {
-  background-color: #007bff !important;
+  background-color: #007bff !important; /* Active state background */
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px) !important;
-}
-
-.mode-label {
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 1rem !important;
-  color: #333 !important;
+  transform: translateX(26px) !important; /* Move toggle button */
 }
 
 /* Responsive Design */
@@ -225,6 +220,11 @@ input:checked + .slider:before {
   p {
     font-size: 1rem !important;
   }
+
+  .dark-mode-slider {
+    position: static !important; /* Stack naturally below elements */
+    margin-top: 20px !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -252,5 +252,9 @@ input:checked + .slider:before {
 
   .chat-box {
     height: 300px !important;
+  }
+
+  .dark-mode-slider {
+    margin-top: 20px !important;
   }
 }
