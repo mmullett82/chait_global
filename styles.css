@@ -33,12 +33,12 @@ p {
 }
 
 .chat-section {
+  position: relative !important; /* Enables relative positioning for slider */
   width: 60% !important;
   background-color: #fff !important;
   border-radius: 10px !important;
   padding: 20px !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
-  position: relative; /* For positioning the slider relative to the chat box */
 }
 
 .chat-box {
@@ -133,9 +133,9 @@ body.dark-mode button:hover {
 
 /* Dark Mode Slider */
 .dark-mode-slider {
-  position: absolute !important; /* Positioned relative to the chat section */
-  bottom: -50px !important; /* Positioned just below the chat box */
-  right: 20px !important; /* Aligned to the bottom-right corner */
+  position: absolute !important; /* Position relative to chat-section */
+  bottom: -60px !important; /* Below the chat box */
+  right: 20px !important; /* Align with right side */
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
@@ -150,7 +150,7 @@ body.dark-mode button:hover {
 }
 
 .switch input {
-  opacity: 0 !important; /* Hide the checkbox completely */
+  opacity: 0 !important;
   width: 0 !important;
   height: 0 !important;
 }
@@ -162,7 +162,7 @@ body.dark-mode button:hover {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background-color: #ccc !important; /* Default background */
+  background-color: #ccc !important;
   transition: 0.4s !important;
   border-radius: 34px !important;
 }
@@ -185,6 +185,12 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px) !important; /* Move toggle button */
+}
+
+.mode-label {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 1rem !important;
+  color: #333 !important;
 }
 
 /* Responsive Design */
