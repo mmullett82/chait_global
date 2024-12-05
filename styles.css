@@ -33,7 +33,6 @@ p {
 }
 
 .chat-section {
-  position: relative !important; /* Enables relative positioning for slider */
   width: 60% !important;
   background-color: #fff !important;
   border-radius: 10px !important;
@@ -42,17 +41,19 @@ p {
 }
 
 .chat-box {
-  position: relative !important; /* Enable positioning for the slider */
-  height: 350px !important;
+  position: relative !important; /* Enables slider positioning */
+  height: 400px !important; /* Increased height to accommodate the slider */
   border: 1px solid #e0e0e0 !important;
   border-radius: 8px !important;
   overflow-y: auto !important;
   padding: 10px !important;
   background-color: #fafafa !important;
+  margin-bottom: 20px !important; /* Add spacing between chat box and input group */
 }
 
 .input-group {
   display: flex !important;
+  margin-top: 10px !important; /* Push input group slightly downward */
 }
 
 input[type="text"] {
@@ -100,25 +101,25 @@ button:hover {
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: #1e1e1e !important; /* Dark background */
-  color: #f8f8f8 !important; /* Brighter text for better contrast */
+  color: #ffffff !important; /* Brighter text for all content */
 }
 
 body.dark-mode .chat-section,
 body.dark-mode .summary-box,
 body.dark-mode .outline-box {
   background-color: #2a2a2a !important;
-  color: #f8f8f8 !important;
+  color: #ffffff !important; /* Titles and text turn white */
   border: 1px solid #444 !important;
 }
 
 body.dark-mode .chat-box {
   background-color: #1a1a1a !important;
-  color: #f8f8f8 !important;
+  color: #ffffff !important;
 }
 
 body.dark-mode input[type="text"] {
   background-color: #333 !important;
-  color: #f8f8f8 !important;
+  color: #ffffff !important; /* Input text turns white */
   border: 1px solid #444 !important;
 }
 
@@ -131,15 +132,19 @@ body.dark-mode button:hover {
   background-color: #e5bb00 !important;
 }
 
+body.dark-mode .mode-label {
+  color: #ffffff !important; /* "Dark Mode" label turns white */
+}
+
 /* Dark Mode Slider */
 .dark-mode-slider {
-  position: absolute !important; /* Position relative to chat-box */
+  position: absolute !important; /* Positioned relative to chat-box */
   bottom: 10px !important; /* Inside the chat-box at the bottom */
   right: 10px !important; /* Align with right side */
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
-  z-index: 1 !important;
+  z-index: 2 !important;
 }
 
 /* Slider Styles */
@@ -186,13 +191,6 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px) !important; /* Move toggle button */
-}
-
-.mode-label {
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 0.9rem !important;
-  color: #333 !important;
-  margin-left: 5px !important;
 }
 
 /* Responsive Design */
@@ -259,7 +257,7 @@ input:checked + .slider:before {
   }
 
   .chat-box {
-    height: 300px !important;
+    height: 350px !important;
   }
 
   .dark-mode-slider {
