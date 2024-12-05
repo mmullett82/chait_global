@@ -11,12 +11,16 @@
   <div class="container">
     <div class="chat-section">
       <h2>Chat</h2>
-      <div class="chat-box" id="chatBox"></div>
+      <div class="chat-box" id="chatBox">
+        <!-- User Prompt -->
+        <div class="system-message">
+          Welcome to your custom assistant! I’m here to provide you with expert, tailored assistance in [specific area, e.g., cabinet building]. Whether you need detailed answers, process clarifications, or guidance on industry standards, feel free to ask. Let’s get started—how can I assist you today?
+        </div>
+      </div>
       <div class="input-group">
         <input type="text" id="messageInput" placeholder="Type your message...">
         <button onclick="sendMessage()">Send</button>
       </div>
-      <!-- Dark Mode Slider -->
       <div class="dark-mode-slider">
         <label class="switch">
           <input type="checkbox" id="darkModeToggle">
