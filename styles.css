@@ -42,18 +42,18 @@ p {
 
 .chat-box {
   position: relative !important; /* Enables slider positioning */
-  height: 400px !important; /* Adjusted height to fit system message */
+  height: 400px !important; /* Increased height to accommodate the slider */
   border: 1px solid #e0e0e0 !important;
   border-radius: 8px !important;
   overflow-y: auto !important;
   padding: 10px !important;
   background-color: #fafafa !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 20px !important; /* Add spacing between chat box and input group */
 }
 
 .input-group {
   display: flex !important;
-  margin-top: 10px !important;
+  margin-top: 10px !important; /* Push input group slightly downward */
 }
 
 input[type="text"] {
@@ -66,34 +66,21 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
-  color: #aaa !important; /* Light gray for placeholder text in light mode */
-}
-
-body.dark-mode input[type="text"]::placeholder {
-  color: #888 !important; /* Light gray for placeholder text in dark mode */
+  color: #aaa !important;
 }
 
 button {
-  padding: 15px 20px;
-  background-color: #007bff; /* Bright blue */
-  color: white;
-  border: none;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  padding: 15px 20px !important;
+  background-color: #007bff !important; /* Bright blue */
+  color: white !important;
+  border: none !important;
+  border-radius: 0 8px 8px 0 !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
 }
 
 button:hover {
-  background-color: #0056b3;
-}
-
-body.dark-mode button {
-  background-color: #007bff !important; /* Match blue color from light mode */
-  color: white !important;
-}
-
-body.dark-mode button:hover {
-  background-color: #0056b3 !important; /* Hover color for dark mode */
+  background-color: #0056b3 !important;
 }
 
 .summary-outline-section {
@@ -130,32 +117,28 @@ body.dark-mode .chat-box {
   color: #ffffff !important;
 }
 
+body.dark-mode input[type="text"] {
+  background-color: #333 !important;
+  color: #ffffff !important; /* Input text turns white */
+  border: 1px solid #444 !important;
+}
+
+body.dark-mode button {
+  background-color: #f8d210 !important; /* Bright yellow */
+  color: #1e1e1e !important;
+}
+
+body.dark-mode button:hover {
+  background-color: #e5bb00 !important;
+}
+
 body.dark-mode .mode-label {
   color: #ffffff !important; /* "Dark Mode" label turns white */
 }
 
-/* System Message Styling */
-.system-message {
-  background-color: #f9f9f9; /* Match light mode background */
-  color: #666; /* Softer gray to match "Type your message" tone */
-  font-weight: 400; /* Normal weight (not bold) */
-  border: 1px solid #ddd; /* Subtle border */
-  border-radius: 8px;
-  padding: 10px;
-  margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-body.dark-mode .system-message {
-  background-color: #1a1a1a !important; /* Match dark mode chat box */
-  color: #b0b0b0 !important; /* Light gray text for dark mode */
-}
-
 /* Dark Mode Slider */
 .dark-mode-slider {
-  position: absolute !important; /* Position relative to chat-box */
+  position: absolute !important; /* Positioned relative to chat-box */
   bottom: 10px !important; /* Inside the chat-box at the bottom */
   right: 10px !important; /* Align with right side */
   display: flex !important;
