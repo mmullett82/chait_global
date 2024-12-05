@@ -33,6 +33,7 @@ p {
 }
 
 .chat-section {
+  position: relative !important; /* Enables relative positioning for slider */
   width: 60% !important;
   background-color: #fff !important;
   border-radius: 10px !important;
@@ -47,7 +48,6 @@ p {
   border-radius: 8px !important;
   overflow-y: auto !important;
   padding: 10px !important;
-  margin-bottom: 15px !important;
   background-color: #fafafa !important;
 }
 
@@ -100,25 +100,25 @@ button:hover {
 /* Dark Mode Styles */
 body.dark-mode {
   background-color: #1e1e1e !important; /* Dark background */
-  color: #f5f5f5 !important; /* Light text */
+  color: #f8f8f8 !important; /* Brighter text for better contrast */
 }
 
 body.dark-mode .chat-section,
 body.dark-mode .summary-box,
 body.dark-mode .outline-box {
   background-color: #2a2a2a !important;
-  color: #f5f5f5 !important;
+  color: #f8f8f8 !important;
   border: 1px solid #444 !important;
 }
 
 body.dark-mode .chat-box {
   background-color: #1a1a1a !important;
-  color: #f5f5f5 !important;
+  color: #f8f8f8 !important;
 }
 
 body.dark-mode input[type="text"] {
   background-color: #333 !important;
-  color: #f5f5f5 !important;
+  color: #f8f8f8 !important;
   border: 1px solid #444 !important;
 }
 
@@ -139,10 +139,7 @@ body.dark-mode button:hover {
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
-  z-index: 1000 !important;
-  background-color: rgba(255, 255, 255, 0.8) !important; /* Optional background for contrast */
-  padding: 5px 10px !important;
-  border-radius: 15px !important;
+  z-index: 1 !important;
 }
 
 /* Slider Styles */
