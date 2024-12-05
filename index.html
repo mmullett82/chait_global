@@ -8,14 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="dark-mode-slider">
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider"></span>
-    </label>
-    <span class="mode-label">Dark Mode</span>
-  </div>
-
   <div class="container">
     <div class="chat-section">
       <h2>Chat</h2>
@@ -23,6 +15,14 @@
       <div class="input-group">
         <input type="text" id="messageInput" placeholder="Type your message...">
         <button onclick="sendMessage()">Send</button>
+      </div>
+      <!-- Dark Mode Slider -->
+      <div class="dark-mode-slider">
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
+        </label>
+        <span class="mode-label">Dark Mode</span>
       </div>
     </div>
 
@@ -38,10 +38,6 @@
       </div>
     </div>
   </div>
-
-  <script src="app.js"></script>
-</body>
-</html>
 
   <script src="app.js"></script>
 </body>
